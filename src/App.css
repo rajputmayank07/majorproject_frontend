@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+  /* Adjust font sizes, margins, etc. for smaller screens */
+  /* h1 {
+    font-size: 1.5rem;
+  }
+}
+ */ 
