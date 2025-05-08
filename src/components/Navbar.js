@@ -105,5 +105,3 @@ return(
   );
 }
 export default Navbar;
-
-

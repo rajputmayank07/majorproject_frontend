@@ -70,8 +70,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaQrcode, FaRegCalendarAlt, FaChartBar } from 'react-icons/fa';
 import { FaChevronDown } from "react-icons/fa";
+import { getUser } from '../services/auth';
 
 function Home() {
+  const user=getUser();
   return (
     <div>
       {/* Hero Section */}
@@ -100,9 +102,9 @@ function Home() {
         <div style={{ zIndex: 2 }}>
           <h1 className="display-4 fw-bold">Welcome to DH-93 Dining</h1>
           <p className="lead">Smart Dining, Powered by RFID — No queues. Just scan and eat.</p>
-          <Link to="/signup" className="btn btn-primary btn-lg mt-3 shadow rounded-pill">
+          {!user && (<Link to="/signup" className="btn btn-primary btn-lg mt-3 shadow rounded-pill">
             Get Started
-          </Link>
+          </Link>)}
         </div>
 
         <div className="position-absolute bottom-0 pb-3" style={{ zIndex: 2, animation: "bounce 2s infinite" }}>
